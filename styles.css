@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ROOT VARIABLES */
+:root{
+    --teal:#007d7b;
+    --black:#000000;
+    --white:#ffffff;
+
+    --text-font:Arial, Helvetica, sans-serif;
+}
+
+/* GLOBAL STYLES (small/mobile first) */
+
+*{
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+html{
+    background-color: var(--black);
+}
+
+body{
+    width: 80%;
+    min-width: 438px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+main{
+    background-color: var(--white);
+}
+
+h1, h2, p, img, form{
+    padding: 10px;
+}
+
+header, footer{
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    color: var(--teal);
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul{
+    background-color: var(--black);
+    padding: 25px;
+    overflow: hidden;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    transition: 400ms;
+}
+
+nav a:hover{
+    color: var(--teal);
+}
+
+li:last-of-type{
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--white);
+    position: fixed;
+    bottom: 0;
+    padding: 15px 0;
+    right: 0;
+    z-index: 2;
+}
+
+h2{
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+figure{
+    position: relative;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+figcaption{
+    text-transform: uppercase;
+    position: absolute;
+
+}
+
+figcaption.bttm1{
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    color: var(--white);
+}
+
+figcaption.bttm3{
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    color: var(--white);
+}
+
+figcaption.top1{
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    color: var(--white);
+}
+
+figcaption.top2{
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    color: var(--black);
+}
+
+figcaption.top3{
+    top:5%;
+    left: 50%;
+    transform: translate(-50%, -5%);  
+}
+
+
+figcaption.bttm2{
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    color: var(--black);
+}
+
+#contact{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#contact p:first-of-type{
+    text-align: center;
+}
+form{
+    color: var(--white);
+    text-align: left;
+    margin: 15px auto;
+    padding: 20px;
+}
+
+label{
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+input, textarea{
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+textarea{
+    resize: vertical;
+}
+
+input::placeholder, textarea::placeholder{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--teal);
+}
+
+input[type=submit]{
+    width: 50%;
+    background-color: var(--teal);
+    color: var(--white);
+    border-radius: 100px;
+    margin: 0 auto;
+    transition: 400ms;
+}
+
+input[type=submit]:hover{
+    background-color: var(--white);
+    color: var(--teal);
+}
+
+footer p{
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: var(--text-font);
+}
+
+/* MEDIA QUERY (medium) */
+@media screen and (min-width:880px){
+    h1{
+        text-align: left;
+    }
+
+    #gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #gallery h2, #gallery p{
+        grid-column-start: span 2;
+    }
+
+    figcaption.bttm3{
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        color: var(--white);
+    }
+  
+}
+
+/* MEDIA QUERY (large) */
+@media screen and (min-width:1300px){
+    nav li{
+        float: right;
+    }
+    #gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #gallery h2, #gallery p{
+        grid-column-start: span 3;
+    }
+}
